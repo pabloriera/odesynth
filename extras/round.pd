@@ -1,0 +1,17 @@
+#N canvas 348 584 295 177 10;
+#X obj 24 16 inlet;
+#X obj 24 46 * 100;
+#X obj 24 72 int;
+#X obj 24 97 / 100;
+#X obj 24 131 outlet;
+#X obj 82 46 f \$1;
+#X obj 82 22 initbang;
+#X obj 82 71 expr pow(10 \, $f1);
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 1;
+#X connect 7 0 3 1;

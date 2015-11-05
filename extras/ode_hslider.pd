@@ -83,7 +83,7 @@ empty 0 -8 0 8 -204800 -1 -1 100 256;
 #X obj 166 283 r /\$2/prob_random;
 #X obj 100 305 moses;
 #X obj 100 326 t b;
-#X obj 399 211 line3;
+#X obj 399 211 line;
 #X obj 983 179 r ode_slider[\$1].name;
 #X obj 788 71 state_io_set /\$2/max;
 #X obj 606 72 state_io_set /\$2/min;

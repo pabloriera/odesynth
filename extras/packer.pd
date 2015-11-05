@@ -1,0 +1,6 @@
+#N canvas 900 840 268 135 10;
+#X obj 82 27 r /\$2/value;
+#X obj 82 53 hotpack \$1 f;
+#X obj 82 80 outlet;
+#X connect 0 0 1 1;
+#X connect 1 0 2 0;

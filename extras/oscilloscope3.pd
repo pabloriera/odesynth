@@ -1,0 +1,7 @@
+#N canvas 737 396 440 288 10;
+#X obj 40 53 scopegem \$1;
+#X obj 41 19 catch~ gem_\$1_out_0;
+#X obj 164 18 catch~ gem_\$1_out_1;
+#X obj 288 19 catch~ gem_\$1_out_2;
+#X connect 1 0 0 0;
+#X connect 3 0 0 1;

@@ -1,0 +1,80 @@
+#N canvas 750 645 241 83 10;
+#X declare -lib py;
+#X declare -path ode_externals;
+#X declare -path extras;
+#N canvas 1088 430 764 606 python 1;
+#X obj 394 -149 import py;
+#X obj 394 -128 path ode_externals;
+#X obj 394 -107 path extras;
+#X msg 347 -27 reload;
+#X msg 307 -27 doc;
+#X msg 394 -197 build;
+#X obj 394 -248 bng 40 250 50 0 empty empty Build 0 -10 0 15 -4034
+-13381 -16662;
+#X obj 464 -28 r system_commands;
+#X obj 394 -173 s system_commands;
+#X obj 223 -251 bng 40 250 50 0 empty empty Print 0 -10 0 15 -257985
+-83269 -16662;
+#X obj 223 -177 s system_commands;
+#X msg 223 -201 print;
+#X obj -101 -247 bng 40 250 50 0 empty empty Clear 0 -10 0 15 -4032
+-13330 -16662;
+#X obj -101 -173 s system_commands;
+#X msg -101 -196 clear;
+#X obj 347 0 pyext ode_parser generate;
+#X msg 97 199 inputs I1;
+#X obj 97 256 list2symbol;
+#X obj 32 51 bng 40 250 50 0 empty empty Set_Data 0 -10 0 15 -258113
+-86277 -16662;
+#X obj 59 296 s system_commands;
+#X obj 32 98 t b b b b b;
+#X msg 96 151 variables x y z;
+#X msg 97 223 dx = (y -a*x*x*x+b*x*x-z+I1)/tau \, dy = (c-d*x*x -y)/tau
+\, dz = r*(s*(x-xr)-z)/tau;
+#X msg 97 175 parameters a b c d r s xr tau;
+#X msg 101 -92 inputs I1;
+#X obj 101 -35 list2symbol;
+#X obj 36 -240 bng 40 250 50 0 empty empty Set_Data 0 -10 0 15 -258113
+-86277 -16662;
+#X obj 63 5 s system_commands;
+#X obj 36 -193 t b b b b b;
+#X msg 100 -140 variables x y;
+#X msg 101 -68 dx = w*y + e*x - x*(x*x+y*y) + I1 \, dy = -w*x +e*x
+-y*(y*y+x*x);
+#X msg 101 -116 parameters w e;
+#X msg 99 -164 name hopf;
+#X msg 95 127 name hr;
+#X connect 3 0 15 0;
+#X connect 4 0 15 0;
+#X connect 5 0 8 0;
+#X connect 6 0 5 0;
+#X connect 7 0 15 1;
+#X connect 9 0 11 0;
+#X connect 11 0 10 0;
+#X connect 12 0 14 0;
+#X connect 14 0 13 0;
+#X connect 16 0 19 0;
+#X connect 17 0 19 0;
+#X connect 18 0 20 0;
+#X connect 20 0 22 0;
+#X connect 20 1 16 0;
+#X connect 20 2 23 0;
+#X connect 20 3 21 0;
+#X connect 20 4 33 0;
+#X connect 21 0 19 0;
+#X connect 22 0 17 0;
+#X connect 23 0 19 0;
+#X connect 24 0 27 0;
+#X connect 25 0 27 0;
+#X connect 26 0 28 0;
+#X connect 28 0 30 0;
+#X connect 28 1 24 0;
+#X connect 28 2 31 0;
+#X connect 28 3 29 0;
+#X connect 28 4 32 0;
+#X connect 29 0 27 0;
+#X connect 30 0 25 0;
+#X connect 31 0 27 0;
+#X connect 32 0 27 0;
+#X connect 33 0 19 0;
+#X restore 24 -17 pd python parser;

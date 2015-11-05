@@ -1,0 +1,117 @@
+#N canvas 726 283 953 459 10;
+#X obj 0 0 cnv 15 210 60 empty empty empty 20 12 0 9 -195568 -66577
+0;
+#X msg 7 267 width \$1;
+#X obj 649 80 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 724 78 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 634 99 *~;
+#X obj 709 98 *~;
+#X obj 500 90 scaleXYZ 1 1 1;
+#X obj 539 64 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X msg 243 268 draw point;
+#X msg 141 268 draw linestrip;
+#X obj 500 358 scopeXYZ~ 2048;
+#X obj 500 163 translateXYZ;
+#X obj 523 119 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 -0.500033 256;
+#X obj 5 25 nbx 4 14 -1e+37 1e+37 0 1 empty empty Scale 42 8 0 8 -262144
+-1 -1 1 256;
+#X obj 649 62 nbx 4 14 -1e+37 1e+37 0 1 empty gem_scope_size_x_\$1
+X.Size 0 -8 0 8 -262144 -1 -1 1 256;
+#X obj 724 62 nbx 4 14 -1e+37 1e+37 0 1 empty gem_scope_size_y_\$1
+Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
+#X obj 78 85 nbx 5 14 -1e+37 1e+37 0 1 empty gem_scope_shift_x_\$1
+Shift.X 0 -8 0 8 -262144 -1 -1 -0.500033 256;
+#X obj 131 85 nbx 5 14 -1e+37 1e+37 0 1 empty gem_scope_shift_y_\$1
+Shift.Y 0 -8 0 8 -262144 -1 -1 0.500033 256;
+#X obj 546 140 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.500033 256;
+#X obj 7 242 nbx 3 14 1 1e+37 0 1 empty empty Width 0 -8 0 8 -262144
+-1 -1 1 256;
+#X msg 5 176 length \$1;
+#X obj 5 154 nbx 5 14 1 1e+37 0 1 empty empty Length 0 -8 0 8 -262144
+-1 -1 1024 256;
+#X obj 5 5 tgl 15 1 empty empty On.Off 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 229 239 bng 15 250 50 0 empty gem_scope_draw_point_\$1 P 17
+7 0 10 -262144 -1 -1;
+#X obj 141 241 bng 15 250 50 0 empty empty L 17 7 0 10 -262144 -1 -1
+;
+#X obj 500 28 gemhead 10;
+#X obj 634 19 inlet~;
+#X obj 708 18 inlet~;
+#X obj 5 119 expr pow(2 \, $f1);
+#X obj 5 44 nbx 3 14 1 1e+37 0 1 empty empty 2pow 34 8 0 8 -262144
+-1 -1 10 256;
+#X obj 500 301 color;
+#X obj 527 273 r gem_scope_color_\$1;
+#X obj 78 0 grid xy 60 -8 8 60 -8 8 0 0.1 0.1 10 10 106 28;
+#X msg 110 -37 color 255 255 255;
+#X obj 110 -60 loadbang;
+#X obj 144 0 grid xy 60 0 180 60 0 180 0 2 2 10 10 140 -3;
+#X obj 166 238 loadbang;
+#X obj 500 218 rotateXYZ;
+#X obj 578 195 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 515 194 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 180 256;
+#X obj 802 75 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 787 95 *~;
+#X obj 787 18 inlet~;
+#X obj 7 294 s \$0_gem;
+#X obj 5 202 s \$0_gem;
+#X obj 141 297 s \$0_gem;
+#X obj 243 298 s \$0_gem;
+#X obj 441 331 r \$0_gem;
+#X connect 1 0 43 0;
+#X connect 2 0 4 1;
+#X connect 3 0 5 1;
+#X connect 4 0 10 1;
+#X connect 5 0 10 2;
+#X connect 6 0 11 0;
+#X connect 7 0 6 1;
+#X connect 7 0 6 2;
+#X connect 7 0 6 3;
+#X connect 8 0 46 0;
+#X connect 9 0 45 0;
+#X connect 11 0 37 0;
+#X connect 12 0 11 1;
+#X connect 13 0 7 0;
+#X connect 14 0 2 0;
+#X connect 15 0 3 0;
+#X connect 16 0 12 0;
+#X connect 17 0 18 0;
+#X connect 18 0 11 2;
+#X connect 19 0 1 0;
+#X connect 20 0 44 0;
+#X connect 21 0 20 0;
+#X connect 22 0 25 0;
+#X connect 23 0 8 0;
+#X connect 24 0 9 0;
+#X connect 25 0 6 0;
+#X connect 26 0 4 0;
+#X connect 27 0 5 0;
+#X connect 28 0 21 0;
+#X connect 29 0 28 0;
+#X connect 30 0 10 0;
+#X connect 31 0 30 1;
+#X connect 32 0 16 0;
+#X connect 32 1 17 0;
+#X connect 33 0 32 0;
+#X connect 33 0 35 0;
+#X connect 34 0 33 0;
+#X connect 35 0 38 0;
+#X connect 35 1 39 0;
+#X connect 36 0 9 0;
+#X connect 37 0 30 0;
+#X connect 38 0 37 3;
+#X connect 39 0 37 1;
+#X connect 40 0 41 1;
+#X connect 41 0 10 3;
+#X connect 42 0 41 0;
+#X connect 47 0 10 0;
+#X coords 0 -1 1 1 210 60 1 0 0;

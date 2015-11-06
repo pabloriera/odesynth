@@ -1,6 +1,6 @@
-#N canvas 1061 223 734 346 10;
+#N canvas 1057 233 734 346 10;
 #X obj -220 278 namecanvas \$0self;
-#N canvas 151 171 706 713 builder 1;
+#N canvas 147 181 706 713 builder 1;
 #X obj 264 337 s \$0self;
 #X obj 204 11 initbang;
 #X obj 204 66 dollarg;
@@ -10,7 +10,7 @@
 #X obj 231 164 t a b;
 #X obj -100 140 list length;
 #X obj 258 190 cup;
-#X msg -100 218 donecanvasdialog 1 -1 -1 0 -1 1 1 430 127 0 0;
+#X msg -100 218 donecanvasdialog 1 -1 -1 0 -1 1 1 430 111 0 0;
 #X obj 213 243 pack s f f;
 #X obj 178 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -23,12 +23,12 @@
 #X obj -158 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj -100 165 expr ($f1-1)*16+15;
-#X msg -100 194 set donecanvasdialog 1 -1 -1 0 -1 1 1 430 \$1 0 0;
 #X msg 246 379 obj -220 \$2 packer \$3 \$1;
 #X obj 213 448 unpack s f f;
 #X obj 214 485 expr $f1*2+4;
 #X msg 214 515 connect \$1 0 2 0;
 #X obj 214 545 s \$0self;
+#X msg -100 194 set donecanvasdialog 1 -1 -1 0 -1 1 1 445 \$1 0 0;
 #X connect 1 0 2 0;
 #X connect 2 0 15 0;
 #X connect 4 0 9 0;
@@ -42,8 +42,8 @@
 #X connect 10 0 14 0;
 #X connect 11 0 2 0;
 #X connect 12 0 8 0;
-#X connect 14 0 22 0;
-#X connect 14 1 21 0;
+#X connect 14 0 21 0;
+#X connect 14 1 20 0;
 #X connect 14 2 16 0;
 #X connect 15 0 7 0;
 #X connect 15 1 5 0;
@@ -51,12 +51,12 @@
 #X connect 16 0 0 0;
 #X connect 17 0 10 1;
 #X connect 18 0 4 0;
-#X connect 19 0 20 0;
-#X connect 20 0 9 0;
-#X connect 21 0 13 0;
-#X connect 22 2 23 0;
+#X connect 19 0 25 0;
+#X connect 20 0 13 0;
+#X connect 21 2 22 0;
+#X connect 22 0 23 0;
 #X connect 23 0 24 0;
-#X connect 24 0 25 0;
+#X connect 25 0 9 0;
 #X restore -220 254 pd builder;
 #X obj -220 227 outlet;
-#X coords 0 -1 1 1 430 127 2 0 0;
+#X coords 0 -1 1 1 430 111 2 0 0;

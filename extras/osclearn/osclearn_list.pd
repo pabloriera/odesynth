@@ -1,4 +1,4 @@
-#N canvas 669 282 850 396 10;
+#N canvas 667 287 850 396 10;
 #X obj -8 308 outlet;
 #X obj -8 125 unpack s f;
 #X obj -8 251 route s;
@@ -20,6 +20,7 @@
 #X obj 355 99 inlet;
 #X msg 71 284 set symbol \$1;
 #X obj 405 98 inlet;
+#X obj 414 236 route s;
 #X connect 1 0 8 0;
 #X connect 2 0 0 0;
 #X connect 3 0 6 0;

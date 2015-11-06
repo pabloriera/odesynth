@@ -1,4 +1,4 @@
-#N canvas 50 360 418 308 10;
+#N canvas 48 365 418 308 10;
 #X declare -path extras/state_manager;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
@@ -13,18 +13,15 @@
 #X obj -143 221 maxlib/scale 0 1 0 1;
 #X obj 76 199 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 1 256;
-#X obj -49 152 loadbang;
-#X obj -49 173 state_io_get \$1/min;
-#X obj 76 172 state_io_get \$1/max;
 #X obj -143 128 osclearn_list;
-#X connect 0 0 10 1;
+#X obj -49 173 state_io \$1/min;
+#X obj 76 173 state_io \$1/max;
+#X connect 0 0 7 1;
 #X connect 1 0 5 0;
 #X connect 2 0 5 3;
 #X connect 5 0 4 0;
 #X connect 6 0 5 4;
-#X connect 7 0 8 0;
-#X connect 7 0 9 0;
+#X connect 7 0 1 0;
 #X connect 8 0 2 0;
 #X connect 9 0 6 0;
-#X connect 10 0 1 0;
 #X coords 0 -1 1 1 15 15 2 100 100;

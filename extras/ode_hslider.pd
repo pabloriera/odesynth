@@ -1,9 +1,12 @@
-#N canvas 1 321 1240 553 10;
+#N canvas 512 343 1240 553 10;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -path extras/state_manager;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X obj 405 101 nbx 4 14 -1e+37 1e+37 0 1 \$0_slider_max \$0_slider_max_set
@@ -49,8 +52,8 @@ empty 0 -8 0 8 -204800 -1 -1 0 256;
 #X obj 985 474 0;
 #X obj 985 451 sel 0;
 #X obj 983 327 round 5;
-#X obj 274 100 hsl 128 15 0 1 0 1 \$0_slider \$0_slider_set 1 2 9 0
-9 -204786 -1 -1 12700 1;
+#X obj 274 100 hsl 128 15 0 1 0 1 \$0_slider \$0_slider_set 0 2 9 0
+9 -204786 -1 -1 0 1;
 #X obj 399 261 state_io_set /\$2/value;
 #X obj 491 101 nbx 4 14 0 80000 0 1 \$0_line_time \$0_line_time_set
 empty 0 -8 0 8 -204786 -1 -1 0 256;
@@ -99,6 +102,7 @@ empty 0 -8 0 8 -204800 -1 -1 100 256;
 #X obj 1028 450 r /\$2/value;
 #X obj 1012 474 f;
 #X obj 985 499 s /\$2/value;
+#X obj 530 100 ode_osclearn /\$2;
 #X connect 6 0 61 0;
 #X connect 8 0 39 1;
 #X connect 10 0 70 1;
@@ -162,4 +166,4 @@ empty 0 -8 0 8 -204800 -1 -1 100 256;
 #X connect 80 1 50 0;
 #X connect 81 0 82 1;
 #X connect 82 0 83 0;
-#X coords 0 -1 1 1 430 15 2 100 100;
+#X coords 0 -1 1 1 445 15 2 100 100;

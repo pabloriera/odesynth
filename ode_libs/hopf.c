@@ -18,9 +18,9 @@ void dimensions(int x[])
 
 void equation(t_sample X[], t_sample t, t_sample param[],t_sample dX[], t_sample input[] )
 {
-dX[0] = 2*PI*param[1]*X[1] + param[0]*X[0] - (X[0]*X[0]+X[1]*X[1])*X[0] + input[0];
+dX[0] = 2*PI*param[0]*X[1] + (param[1]*X[0] - X[0]*(X[0]*X[0]+X[1]*X[1]) + input[0])*100;
  
-  dX[1] = -2*PI*param[1]*X[0] + param[0]*X[1] - (X[0]*X[0]+X[1]*X[1])*X[1] + input[1];
+  dX[1] = -2*PI*param[0]*X[0] + (param[1]*X[1] -X[1]*(X[1]*X[1]+X[0]*X[0]) + input[1])*100;
  
- 
+  
 }

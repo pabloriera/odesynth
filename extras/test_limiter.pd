@@ -1,0 +1,201 @@
+#N canvas 60 290 1162 455 10;
+#X declare -lib sfruit;
+#X obj 317 251 output~;
+#X obj 342 129 *~;
+#X obj 413 67 +~ 1;
+#X obj 413 40 osc~ 1;
+#N canvas 1178 363 589 340 limiter 0;
+#N canvas 1213 460 450 300 write 0;
+#X obj 44 46 inlet~;
+#X obj 43 113 outlet~;
+#X obj 43 81 delwrite~ \$0-del 1000;
+#X connect 0 0 2 0;
+#X restore 84 64 pd write;
+#X obj 84 37 inlet~;
+#N canvas 1152 543 240 207 read 0;
+#X obj 60 72 inlet~;
+#X obj 61 127 delread~ \$0-del;
+#X obj 62 152 outlet~;
+#X obj 61 101 r \$0-deltime;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X restore 85 90 pd read;
+#X obj 230 87 s \$0-deltime;
+#X obj 230 65 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 42 256;
+#X obj -12 65 env~ 1024 128;
+#X obj -12 92 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 119.925 256;
+#X obj 103 196 outlet~;
+#X obj -32 262 line~;
+#X msg -119 119 0 0;
+#X obj -13 132 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1.19925 256;
+#X obj -32 178 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj -13 109 / 100;
+#X obj -119 71 loadbang;
+#X msg -32 240 \$1 1;
+#X obj 104 167 *~;
+#X obj -119 156 math-bezierpath;
+#X msg -90 119 2 \$1;
+#X msg -50 119 1 \$1;
+#X obj 189 35 inlet;
+#X obj 189 62 t f;
+#X obj 230 35 inlet;
+#X obj 21 273 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.0239883 256;
+#X obj -32 220 dbtorms;
+#X obj -32 197 expr (1+$f1-$f2)*$f3;
+#X obj 320 34 inlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 0 5 0;
+#X connect 2 0 15 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 12 0;
+#X connect 8 0 15 1;
+#X connect 9 0 16 0;
+#X connect 10 0 16 3;
+#X connect 10 0 24 1;
+#X connect 11 0 24 0;
+#X connect 12 0 10 0;
+#X connect 13 0 9 0;
+#X connect 13 0 17 0;
+#X connect 13 0 18 0;
+#X connect 14 0 8 0;
+#X connect 15 0 7 0;
+#X connect 16 1 11 0;
+#X connect 17 0 16 1;
+#X connect 18 0 16 2;
+#X connect 19 0 20 0;
+#X connect 20 0 18 0;
+#X connect 20 0 17 0;
+#X connect 21 0 4 0;
+#X connect 23 0 14 0;
+#X connect 23 0 22 0;
+#X connect 24 0 23 0;
+#X connect 25 0 24 2;
+#X restore 343 168 pd limiter;
+#X obj 415 16 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 591 120 env~ 1024 128;
+#X obj 591 182 timeroll;
+#X obj 591 149 / 100;
+#X obj 341 68 osc~ 1000;
+#X obj 411 143 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 452 172 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 42 256;
+#X obj 802 119 env~ 1024 128;
+#X obj 802 181 timeroll;
+#X obj 802 148 / 100;
+#X obj 866 156 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.875906 256;
+#X obj 407 104 *~;
+#X obj 462 102 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 -10 256;
+#X obj 469 200 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 84.32 256;
+#X obj 663 155 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1.19925 256;
+#N canvas 1207 345 589 340 limiter2 0;
+#N canvas 1213 460 450 300 write 0;
+#X obj 44 46 inlet~;
+#X obj 43 113 outlet~;
+#X obj 43 81 delwrite~ \$0-del 1000;
+#X connect 0 0 2 0;
+#X restore 84 64 pd write;
+#X obj 84 37 inlet~;
+#N canvas 1152 543 240 207 read 0;
+#X obj 60 72 inlet~;
+#X obj 61 127 delread~ \$0-del;
+#X obj 62 152 outlet~;
+#X obj 61 101 r \$0-deltime;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X restore 85 90 pd read;
+#X obj 230 87 s \$0-deltime;
+#X obj 230 65 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 42 256;
+#X obj -12 65 env~ 1024 128;
+#X obj -12 92 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 119.972 256;
+#X obj 85 230 outlet~;
+#X obj -32 262 line~;
+#X obj -32 168 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 9.96823 256;
+#X msg -32 240 \$1 1;
+#X obj 86 201 *~;
+#X obj 189 35 inlet;
+#X obj 189 62 t f;
+#X obj 230 35 inlet;
+#X obj -32 209 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 -6.37458 256;
+#X obj 320 34 inlet;
+#X obj -71 139 moses 1;
+#X obj -12 111 dbtorms;
+#X msg -71 207 1;
+#X obj -32 187 expr (2-$f1)*0.8;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 0 5 0;
+#X connect 2 0 11 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 18 0;
+#X connect 8 0 11 1;
+#X connect 9 0 20 0;
+#X connect 10 0 8 0;
+#X connect 11 0 7 0;
+#X connect 12 0 13 0;
+#X connect 14 0 4 0;
+#X connect 15 0 10 0;
+#X connect 17 0 19 0;
+#X connect 17 1 9 0;
+#X connect 18 0 17 0;
+#X connect 19 0 10 0;
+#X connect 20 0 15 0;
+#X restore 257 171 pd limiter2;
+#X obj 330 212 +~ 0;
+#X obj 195 129 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.9 256;
+#X obj 123 121 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.27 256;
+#X obj 184 98 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 101 256;
+#X obj 89 180 agc~ 0.9 1 40 20 1 1;
+#X obj 151 62 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 15 256;
+#X connect 1 0 4 0;
+#X connect 1 0 6 0;
+#X connect 1 0 20 0;
+#X connect 1 0 25 0;
+#X connect 1 0 25 1;
+#X connect 2 0 16 0;
+#X connect 3 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 8 0;
+#X connect 8 0 7 0;
+#X connect 8 0 19 0;
+#X connect 9 0 1 0;
+#X connect 10 0 4 1;
+#X connect 10 0 20 1;
+#X connect 11 0 4 2;
+#X connect 11 0 20 2;
+#X connect 12 0 14 0;
+#X connect 14 0 13 0;
+#X connect 14 0 15 0;
+#X connect 16 0 1 1;
+#X connect 17 0 16 1;
+#X connect 18 0 4 3;
+#X connect 18 0 20 3;
+#X connect 21 0 0 0;
+#X connect 21 0 0 1;
+#X connect 21 0 12 0;
+#X connect 22 0 25 7;
+#X connect 23 0 25 2;
+#X connect 24 0 25 5;
+#X connect 25 0 21 0;
+#X connect 26 0 25 4;

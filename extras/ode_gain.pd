@@ -1,0 +1,16 @@
+#N canvas 676 456 450 300 10;
+#X obj -10 127 *~;
+#X obj 102 102 knob 20 20 0 200 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 16 84 dbtorms;
+#X obj -11 62 inlet~;
+#X obj -9 175 outlet~;
+#X msg 16 106 \$1 50;
+#X obj 16 128 line;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 1;
+#X coords 0 -1 1 1 25 25 2 100 100;

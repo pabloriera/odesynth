@@ -1,14 +1,5 @@
-#N canvas 512 343 1240 553 10;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
+#N canvas 508 353 1240 553 10;
 #X declare -path extras/state_manager;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
 #X obj 405 101 nbx 4 14 -1e+37 1e+37 0 1 \$0_slider_max \$0_slider_max_set
 empty 0 -8 0 8 -204800 -1 -1 1 256;
 #X obj 232 101 nbx 4 14 -1e+37 1e+37 0 1 \$0_slider_min \$0_slider_min_set

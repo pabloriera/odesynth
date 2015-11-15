@@ -1,49 +1,81 @@
-#N canvas 750 645 241 83 10;
+#N canvas 1104 250 1634 586 10;
 #X declare -lib py;
 #X declare -path ode_externals;
 #X declare -path extras;
-#N canvas 1088 430 764 606 python 1;
-#X obj 394 -149 import py;
-#X obj 394 -128 path ode_externals;
-#X obj 394 -107 path extras;
-#X msg 347 -27 reload;
-#X msg 307 -27 doc;
-#X msg 394 -197 build;
-#X obj 394 -248 bng 40 250 50 0 empty empty Build 0 -10 0 15 -4034
--13381 -16662;
-#X obj 464 -28 r system_commands;
-#X obj 394 -173 s system_commands;
-#X obj 223 -251 bng 40 250 50 0 empty empty Print 0 -10 0 15 -257985
+#X obj 94 -142 import py;
+#X obj 94 -121 path ode_externals;
+#X obj 697 -216 path extras;
+#X msg 257 -219 reload;
+#X msg 217 -219 doc;
+#X msg 94 -190 build;
+#X obj 94 -241 bng 40 250 50 0 empty empty Build 0 -10 0 15 -4034 -13381
+-16662;
+#X obj 374 -220 r system_commands;
+#X obj 94 -166 s system_commands;
+#X obj -77 -244 bng 40 250 50 0 empty empty Print 0 -10 0 15 -257985
 -83269 -16662;
-#X obj 223 -177 s system_commands;
-#X msg 223 -201 print;
-#X obj -101 -247 bng 40 250 50 0 empty empty Clear 0 -10 0 15 -4032
+#X obj -77 -170 s system_commands;
+#X msg -77 -194 print;
+#X obj -239 -246 bng 40 250 50 0 empty empty Clear 0 -10 0 15 -4032
 -13330 -16662;
-#X obj -101 -173 s system_commands;
-#X msg -101 -196 clear;
-#X obj 347 0 pyext ode_parser generate;
-#X msg 97 199 inputs I1;
-#X obj 97 256 list2symbol;
-#X obj 32 51 bng 40 250 50 0 empty empty Set_Data 0 -10 0 15 -258113
+#X obj -239 -172 s system_commands;
+#X msg -239 -195 clear;
+#X obj 257 -192 pyext ode_parser generate;
+#X msg 201 117 inputs I1;
+#X obj 201 174 list2symbol;
+#X obj 136 -31 bng 40 250 50 0 empty empty Set_Data 0 -10 0 15 -258113
 -86277 -16662;
-#X obj 59 296 s system_commands;
-#X obj 32 98 t b b b b b;
-#X msg 96 151 variables x y z;
-#X msg 97 223 dx = (y -a*x*x*x+b*x*x-z+I1)/tau \, dy = (c-d*x*x -y)/tau
-\, dz = r*(s*(x-xr)-z)/tau;
-#X msg 97 175 parameters a b c d r s xr tau;
-#X msg 101 -92 inputs I1;
-#X obj 101 -35 list2symbol;
-#X obj 36 -240 bng 40 250 50 0 empty empty Set_Data 0 -10 0 15 -258113
+#X obj 163 214 s system_commands;
+#X obj 136 16 t b b b b b;
+#X msg 200 69 variables x y z;
+#X obj 947 169 list2symbol;
+#X obj 882 -36 bng 40 250 50 0 empty empty Set_Data 0 -10 0 15 -258113
 -86277 -16662;
-#X obj 63 5 s system_commands;
-#X obj 36 -193 t b b b b b;
-#X msg 100 -140 variables x y;
-#X msg 101 -68 dx = w*y + e*x - x*(x*x+y*y) + I1 \, dy = -w*x +e*x
--y*(y*y+x*x);
-#X msg 101 -116 parameters w e;
-#X msg 99 -164 name hopf;
-#X msg 95 127 name hr;
+#X obj 909 209 s system_commands;
+#X obj 882 11 t b b b b b;
+#X msg 946 64 variables x y;
+#X msg 947 88 parameters w e;
+#X msg 945 40 name hopf;
+#X msg 199 45 name hr;
+#X obj -191 183 list2symbol;
+#X obj -256 -22 bng 40 250 50 0 empty empty Set_Data 0 -10 0 15 -258113
+-86277 -16662;
+#X obj -229 223 s system_commands;
+#X obj -256 25 t b b b b b;
+#X msg -192 78 variables x y;
+#X msg -193 54 name sitt;
+#X msg -191 126 inputs I;
+#X msg -193 150 dx = y \, dy = (a*g+b*g*x + x*x*g-x*y-x*x*x-x*x*y)*g
++ I;
+#X obj 603 182 list2symbol;
+#X obj 538 -23 bng 40 250 50 0 empty empty Set_Data 0 -10 0 15 -258113
+-86277 -16662;
+#X obj 565 222 s system_commands;
+#X obj 538 24 t b b b b b;
+#X msg 602 77 variables x y;
+#X msg 603 125 inputs I;
+#X msg 601 53 name titze;
+#X msg 601 149 dx = y \, dy = -2*PI*f*x - k*x*x - e*y - x*x*y +P*(a-b+2*tau*y)/(x+b+tau*y)
++ I;
+#X msg 602 100 parameters f e k P a b tau;
+#X msg 947 112 inputs I1 I2;
+#X msg 201 141 dx = (y -a*x*x*x+b*x*x-z+I1+I)/tau \, dy = (c-d*x*x
+-y)/tau \, dz = r*(s*(x-xr)-z)/tau;
+#X msg 201 93 parameters a b c d r s xr tau I;
+#X msg 947 136 dx = w*y + (e*x - x*(x*x+y*y) + I1)*100 \, dy = -w*x
++ (e*y -y*(y*y+x*x) + I2)*100;
+#X obj -169 476 list2symbol;
+#X obj -234 271 bng 40 250 50 0 empty empty Set_Data 0 -10 0 15 -258113
+-86277 -16662;
+#X obj -207 516 s system_commands;
+#X obj -234 318 t b b b b b;
+#X msg -169 419 inputs I1 I2;
+#X msg -171 347 name rossler;
+#X msg -170 371 variables x y z;
+#X msg -169 443 dx = (-y-z + I1)/tau \, dy = (x+a*y)/tau \, dz = (b+z*(x-c)+I2)/tau
+;
+#X msg -191 102 parameters a b g;
+#X msg -170 395 parameters a b c tau;
 #X connect 3 0 15 0;
 #X connect 4 0 15 0;
 #X connect 5 0 8 0;
@@ -56,25 +88,60 @@
 #X connect 16 0 19 0;
 #X connect 17 0 19 0;
 #X connect 18 0 20 0;
-#X connect 20 0 22 0;
+#X connect 20 0 48 0;
 #X connect 20 1 16 0;
-#X connect 20 2 23 0;
+#X connect 20 2 49 0;
 #X connect 20 3 21 0;
-#X connect 20 4 33 0;
+#X connect 20 4 29 0;
 #X connect 21 0 19 0;
-#X connect 22 0 17 0;
-#X connect 23 0 19 0;
-#X connect 24 0 27 0;
-#X connect 25 0 27 0;
-#X connect 26 0 28 0;
-#X connect 28 0 30 0;
-#X connect 28 1 24 0;
-#X connect 28 2 31 0;
-#X connect 28 3 29 0;
-#X connect 28 4 32 0;
-#X connect 29 0 27 0;
-#X connect 30 0 25 0;
-#X connect 31 0 27 0;
-#X connect 32 0 27 0;
-#X connect 33 0 19 0;
-#X restore 24 -17 pd python parser;
+#X connect 22 0 24 0;
+#X connect 23 0 25 0;
+#X connect 25 0 50 0;
+#X connect 25 1 47 0;
+#X connect 25 2 27 0;
+#X connect 25 3 26 0;
+#X connect 25 4 28 0;
+#X connect 26 0 24 0;
+#X connect 27 0 24 0;
+#X connect 28 0 24 0;
+#X connect 29 0 19 0;
+#X connect 30 0 32 0;
+#X connect 31 0 33 0;
+#X connect 33 0 37 0;
+#X connect 33 1 36 0;
+#X connect 33 2 59 0;
+#X connect 33 3 34 0;
+#X connect 33 4 35 0;
+#X connect 34 0 32 0;
+#X connect 35 0 32 0;
+#X connect 36 0 32 0;
+#X connect 37 0 30 0;
+#X connect 38 0 40 0;
+#X connect 39 0 41 0;
+#X connect 41 0 45 0;
+#X connect 41 1 43 0;
+#X connect 41 2 46 0;
+#X connect 41 3 42 0;
+#X connect 41 4 44 0;
+#X connect 42 0 40 0;
+#X connect 43 0 40 0;
+#X connect 44 0 40 0;
+#X connect 45 0 38 0;
+#X connect 46 0 40 0;
+#X connect 47 0 24 0;
+#X connect 48 0 17 0;
+#X connect 49 0 19 0;
+#X connect 50 0 22 0;
+#X connect 51 0 53 0;
+#X connect 52 0 54 0;
+#X connect 54 0 58 0;
+#X connect 54 1 55 0;
+#X connect 54 2 60 0;
+#X connect 54 3 57 0;
+#X connect 54 4 56 0;
+#X connect 55 0 53 0;
+#X connect 56 0 53 0;
+#X connect 57 0 53 0;
+#X connect 58 0 51 0;
+#X connect 59 0 32 0;
+#X connect 60 0 53 0;

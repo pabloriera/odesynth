@@ -3,6 +3,366 @@
 <PDContainer type="h_map">
     <element>
         <key>
+            <s>/adc/channel/pan</s>
+        </key>
+        <value>
+            <f>0.470588</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf.0/channel/$2/level</s>
+        </key>
+        <value>
+            <f>97.8243</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf.0/channel/level</s>
+        </key>
+        <value>
+            <f>66.9324</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf.0/channel/pan</s>
+        </key>
+        <value>
+            <f>0.794118</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf.1/channel/$2/level</s>
+        </key>
+        <value>
+            <f>97.8243</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf.1/channel/level</s>
+        </key>
+        <value>
+            <f>68.6487</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf.1/channel/pan</s>
+        </key>
+        <value>
+            <f>1</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/delay/amp/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/delay/time/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/eps/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/eps/max</s>
+        </key>
+        <value>
+            <f>20</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/eps/min</s>
+        </key>
+        <value>
+            <f>-34</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/eps/value</s>
+        </key>
+        <value>
+            <f>2.14173</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/freq/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/freq/max</s>
+        </key>
+        <value>
+            <f>8000</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/freq/min</s>
+        </key>
+        <value>
+            <f>1</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/freq/togg_random</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/freq/value</s>
+        </key>
+        <value>
+            <f>1235.71</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/input/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/input/max</s>
+        </key>
+        <value>
+            <f>300</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/input/value</s>
+        </key>
+        <value>
+            <f>120.472</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/noise/amp/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/noise/amp/max</s>
+        </key>
+        <value>
+            <f>1000</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/noise/amp/value</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/noise/fc/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/noise/fc/max</s>
+        </key>
+        <value>
+            <f>8000</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/noise/fc/value</s>
+        </key>
+        <value>
+            <f>8000</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/osc/amp/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/osc/freq/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/output/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hopf/output/value</s>
+        </key>
+        <value>
+            <f>1</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr.0/channel/hp</s>
+        </key>
+        <value>
+            <f>11.6667</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr.0/channel/level</s>
+        </key>
+        <value>
+            <f>99.5405</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr.0/channel/lp</s>
+        </key>
+        <value>
+            <f>127</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr.0/channel/pan</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr.1/channel/level</s>
+        </key>
+        <value>
+            <f>72.0811</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr.1/channel/lp</s>
+        </key>
+        <value>
+            <f>10.5833</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr.1/channel/pan</s>
+        </key>
+        <value>
+            <f>0.235294</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr.2/channel/level</s>
+        </key>
+        <value>
+            <f>108.122</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr.2/channel/pan</s>
+        </key>
+        <value>
+            <f>0.294118</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr/I/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr/I/max</s>
+        </key>
+        <value>
+            <f>14</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr/I/prob_random</s>
+        </key>
+        <value>
+            <f>100</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr/I/togg_random</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr/I/value</s>
+        </key>
+        <value>
+            <f>4.35543</f>
+        </value>
+    </element>
+    <element>
+        <key>
             <s>/hr/a/line_time</s>
         </key>
         <value>
@@ -166,7 +526,7 @@
             <s>/hr/c/value</s>
         </key>
         <value>
-            <f>1.05512</f>
+            <f>1.00787</f>
         </value>
     </element>
     <element>
@@ -350,7 +710,7 @@
             <s>/hr/input/max</s>
         </key>
         <value>
-            <f>11</f>
+            <f>150</f>
         </value>
     </element>
     <element>
@@ -390,7 +750,7 @@
             <s>/hr/input/value</s>
         </key>
         <value>
-            <f>0.600236</f>
+            <f>100.661</f>
         </value>
     </element>
     <element>
@@ -502,7 +862,7 @@
             <s>/hr/noise/fc/value</s>
         </key>
         <value>
-            <f>1733.23</f>
+            <f>1859.21</f>
         </value>
     </element>
     <element>
@@ -619,6 +979,30 @@
     </element>
     <element>
         <key>
+            <s>/hr/output/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr/output/prob_random</s>
+        </key>
+        <value>
+            <f>100</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/hr/output/togg_random</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
             <s>/hr/r/line_time</s>
         </key>
         <value>
@@ -726,7 +1110,7 @@
             <s>/hr/s/value</s>
         </key>
         <value>
-            <f>6.3622</f>
+            <f>4.0315</f>
         </value>
     </element>
     <element>
@@ -750,7 +1134,7 @@
             <s>/hr/tau/min</s>
         </key>
         <value>
-            <f>0.001</f>
+            <f>0.0001</f>
         </value>
     </element>
     <element>
@@ -782,7 +1166,7 @@
             <s>/hr/tau/value</s>
         </key>
         <value>
-            <f>0.00135433</f>
+            <f>0.0021486</f>
         </value>
     </element>
     <element>
@@ -838,7 +1222,71 @@
             <s>/hr/xr/value</s>
         </key>
         <value>
-            <f>-1.82189</f>
+            <f>-1.7011</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz.0/channel/level</s>
+        </key>
+        <value>
+            <f>89.2432</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz.0/channel/pan</s>
+        </key>
+        <value>
+            <f>0.411765</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz.1/channel/level</s>
+        </key>
+        <value>
+            <f>97.8243</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz.1/channel/pan</s>
+        </key>
+        <value>
+            <f>0.5</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz.2/channel/hp</s>
+        </key>
+        <value>
+            <f>23.3333</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz.2/channel/level</s>
+        </key>
+        <value>
+            <f>87.527</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz.2/channel/lp</s>
+        </key>
+        <value>
+            <f>127</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz.2/channel/pan</s>
+        </key>
+        <value>
+            <f>0.705882</f>
         </value>
     </element>
     <element>
@@ -1022,7 +1470,7 @@
             <s>/lorenz/input/max</s>
         </key>
         <value>
-            <f>2</f>
+            <f>1000</f>
         </value>
     </element>
     <element>
@@ -1062,7 +1510,7 @@
             <s>/lorenz/input/value</s>
         </key>
         <value>
-            <f>1.33591</f>
+            <f>715.197</f>
         </value>
     </element>
     <element>
@@ -1291,6 +1739,38 @@
     </element>
     <element>
         <key>
+            <s>/lorenz/output/line_time</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz/output/prob_random</s>
+        </key>
+        <value>
+            <f>100</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz/output/togg_random</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/lorenz/output/value</s>
+        </key>
+        <value>
+            <f>0.0393701</f>
+        </value>
+    </element>
+    <element>
+        <key>
             <s>/lorenz/r/line_time</s>
         </key>
         <value>
@@ -1407,6 +1887,46 @@
         </key>
         <value>
             <f>0.00551181</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/odematrix/1/7</s>
+        </key>
+        <value>
+            <f>61.5758</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/odematrix/2/1</s>
+        </key>
+        <value>
+            <f>91.9788</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/odematrix/2/7</s>
+        </key>
+        <value>
+            <f>39.5624</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/odematrix/3/1</s>
+        </key>
+        <value>
+            <f>115.455</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/odematrix/3/7</s>
+        </key>
+        <value>
+            <f>0</f>
         </value>
     </element>
 </PDContainer>

@@ -43,6 +43,54 @@
     </element>
     <element>
         <key>
+            <s>/channel/hopf_out_0/level</s>
+        </key>
+        <value>
+            <f>111.554</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/channel/hopf_out_0/lp</s>
+        </key>
+        <value>
+            <f>127</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/channel/hopf_out_0/pan</s>
+        </key>
+        <value>
+            <f>0</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/channel/hopf_out_1/level</s>
+        </key>
+        <value>
+            <f>113.27</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/channel/hopf_out_1/lp</s>
+        </key>
+        <value>
+            <f>127</f>
+        </value>
+    </element>
+    <element>
+        <key>
+            <s>/channel/hopf_out_1/pan</s>
+        </key>
+        <value>
+            <f>1</f>
+        </value>
+    </element>
+    <element>
+        <key>
             <s>/hopf/delay/amp/line_time</s>
         </key>
         <value>

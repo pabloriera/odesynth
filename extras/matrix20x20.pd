@@ -1,4 +1,4 @@
-#N canvas 996 367 1444 428 10;
+#N canvas 473 377 1444 428 10;
 #X obj 108 212 catch~ matrix_in_0;
 #X obj 238 212 catch~ matrix_in_1;
 #X obj 368 212 catch~ matrix_in_2;
@@ -44,10 +44,11 @@
 #X obj 12 72 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 111 138 r ode_mtx_ij;
-#X obj 12 138 r ode_mtx_v;
+#X obj 24 124 r ode_mtx_v;
 #X obj 12 178 mtx_element 20 20;
 #X obj 12 96 mtx_zeros 20 20;
 #X obj 12 46 initbang;
+#X obj 11 222 print;
 #X connect 0 0 40 1;
 #X connect 1 0 40 2;
 #X connect 2 0 40 3;

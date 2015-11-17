@@ -1,27 +1,35 @@
-#N canvas 48 365 418 308 10;
-#X declare -path extras/state_manager;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
+#N canvas 786 410 724 334 10;
+#X declare -path extras;
+#X declare -lib mrpeach;
 #X obj 100 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
 -204800 -1;
 #X obj -143 154 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0
 10 -262144 -1 -1 0 256;
 #X obj -49 199 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj -132 14 path extras/state_manager;
+-262144 -1 -1 -100 256;
 #X obj -143 262 s \$1/value;
 #X obj -143 221 maxlib/scale 0 1 0 1;
 #X obj 76 199 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
-#X obj -143 128 osclearn_list;
-#X obj -49 173 state_io \$1/min;
-#X obj 76 173 state_io \$1/max;
-#X connect 0 0 7 1;
-#X connect 1 0 5 0;
-#X connect 2 0 5 3;
-#X connect 5 0 4 0;
-#X connect 6 0 5 4;
-#X connect 7 0 1 0;
-#X connect 8 0 2 0;
-#X connect 9 0 6 0;
+-262144 -1 -1 64 256;
+#X obj -48 174 r \$1/min;
+#X obj 76 173 r \$1/max;
+#X obj 174 128 r unpacked_osc;
+#X obj -132 14 path extras;
+#X obj -132 37 import mrpeach;
+#X obj -143 128 osclearn;
+#X obj 166 190 PRINT;
+#X obj 174 157 routeOSC \$1/value;
+#X obj 295 157 routeOSC \$1/toogle;
+#X connect 0 0 11 1;
+#X connect 1 0 4 0;
+#X connect 2 0 4 3;
+#X connect 4 0 3 0;
+#X connect 5 0 4 4;
+#X connect 6 0 2 0;
+#X connect 7 0 5 0;
+#X connect 8 0 13 0;
+#X connect 8 0 14 0;
+#X connect 11 0 1 0;
+#X connect 13 0 4 0;
+#X connect 13 0 12 0;
 #X coords 0 -1 1 1 15 15 2 100 100;

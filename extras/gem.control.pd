@@ -1,4 +1,4 @@
-#N canvas 785 166 784 516 10;
+#N canvas 779 181 784 516 10;
 #X obj 264 458 gemwin;
 #X msg 330 230 border \$1;
 #X obj 103 197 tgl 15 1 empty empty Border 17 7 0 10 -262144 -1 -1
@@ -36,14 +36,14 @@
 #X obj 213 207 t b f;
 #X text 1030 511 fogcolor R G B : the color of the fog;
 #X obj 722 558 gemwin;
-#X obj 755 180 tgl 15 1 empty empty empty 0 -6 0 10 -262144 -1 -1 1
+#X obj 755 180 tgl 15 1 empty empty empty 0 -6 0 10 -262144 -1 -1 0
 1;
 #X msg 756 198 lighting \$1;
 #N canvas 804 134 562 454 color 0;
 #X obj 103 100 hsl 128 15 0 1 0 1 empty empty R 12 8 1 12 -261689 -1
--1 0 1;
+-1 1300 1;
 #X obj 236 100 hsl 128 15 0 1 0 1 empty empty G 12 8 1 12 -225271 -1
--1 0 1;
+-1 2000 1;
 #X obj 370 100 hsl 128 15 0 1 0 1 empty empty B 12 8 1 12 -228992 -1
 -1 0 1;
 #X obj 100 379 outlet;
@@ -67,7 +67,7 @@
 #X connect 9 1 4 0;
 #X coords 0 -1 1 1 400 13 1 100 100;
 #X restore 747 124 pd color sliders;
-#X msg 747 146 color 0 0 0;
+#X msg 747 146 color 0.102362 0.15748 0;
 #N canvas 889 134 566 458 color 0;
 #X obj 103 100 hsl 128 15 0 1 0 1 empty empty R 12 8 1 12 -261689 -1
 -1 0 1;
@@ -155,11 +155,11 @@
 #X coords 0 -1 1 1 400 13 1 100 100;
 #X restore 786 490 pd color sliders;
 #X msg 786 512 fogcolor 1 1 1;
-#X msg 791 402 fogmode 3;
+#X msg 791 402 fogmode 0;
 #N canvas 889 134 348 479 fog 0;
 #X obj 84 239 outlet;
 #X obj 100 101 hradio 15 1 1 4 empty empty empty 0 -6 0 10 -262144
--1 -1 3;
+-1 -1 0;
 #X msg 207 182 set fogmode \$1;
 #X obj 84 140 trigger bang float;
 #X connect 1 0 3 0;
@@ -194,7 +194,7 @@
 #X connect 3 0 0 0;
 #X coords 0 -1 1 1 133 13 1 100 100;
 #X restore 792 430 pd fog;
-#X obj 927 534 gemhead;
+#X obj 927 524 gemhead;
 #X obj 927 556 world_light;
 #X text 278 330 comment;
 #X text 344 239 comment;
@@ -231,6 +231,7 @@
 #X msg 452 327 destroy \, FSAA \$1 \, create \, 1;
 #X msg 529 303 14;
 #X msg 117 420 FSAA 8 \, create \, 1;
+#X obj 683 532 r gem_win;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 3 0 0 0;
@@ -299,4 +300,5 @@
 #X connect 70 0 0 0;
 #X connect 71 0 70 0;
 #X connect 72 0 0 0;
+#X connect 73 0 26 0;
 #X coords 0 -1 1 1 100 210 2 100 100;

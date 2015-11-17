@@ -1,8 +1,10 @@
-#N canvas 859 207 454 484 10;
+#N canvas 1141 215 574 712 10;
 #X declare -lib iemmatrix;
 #X declare -path extras;
 #X declare -path extras/state_manager;
 #X declare -lib pdcontainer -lib tof;
+#X declare -path extras/osclearn;
+#X declare -lib mrpeach;
 #X obj 89 -91 loadbang;
 #X msg 89 -67 dir ../../presets;
 #X obj 128 127 import iemmatrix;
@@ -18,21 +20,55 @@
 #X obj 128 213 matrix_containers 20;
 #X obj 12 -36 state_manager_byname;
 #X obj 16 -67 r preset;
-#X msg -4 -221 \; preset time 1000 \, name hopf0 \, load;
-#X msg -3 -194 \; preset time 1000 \, name hopf1 \, load;
-#X msg -3 -362 \; preset time 5000 \, name lorenz0 \, load \, time
+#X msg -2 -263 \; preset time 1000 \, name hopf0 \, load;
+#X msg -2 -228 \; preset time 1000 \, name hopf1 \, load;
+#X msg -3 -436 \; preset time 5000 \, name lorenz0 \, load \, time
 0;
-#X msg -6 -336 \; preset time 4000 \, name lorenz1 \, load \, time
+#X msg -3 -402 \; preset time 4000 \, name lorenz1 \, load \, time
 0;
-#X msg 1 -309 \; preset name lorenz0;
-#X msg -4 -288 \; preset name lorenz1;
-#X msg -3 -266 \; preset name lorenz3;
-#X msg -2 -152 \; preset name hopf1;
-#X msg 2 -130 \; preset name hopf0;
-#X msg 125 -143 \; preset name hopf2;
+#X msg -3 -369 \; preset name lorenz0;
+#X msg -3 -336 \; preset name lorenz1;
+#X msg -3 -302 \; preset name lorenz3;
+#X msg -2 -190 \; preset name hopf1;
+#X msg -2 -153 \; preset name hopf0;
+#X msg 125 -181 \; preset name hopf2;
+#X msg 232 193 print;
+#X msg 265 -177 \; preset name hopf_lorenz0;
+#X obj 298 -305 s gem_scope_color;
+#X obj 298 -332 hsv2rgb;
+#X obj 298 -357 hotpack f f f;
+#X obj 298 -378 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.96 256;
+#X obj 330 -398 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.83 256;
+#X obj 364 -376 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.8 256;
+#X obj 437 -354 hsv2rgb;
+#X obj 437 -379 hotpack f f f;
+#X obj 437 -400 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.27 256;
+#X obj 469 -420 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.25 256;
+#X obj 503 -398 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.76 256;
+#X obj 437 -314 s gem_win;
+#X msg 437 -334 color \$1 \$2 \$3;
+#X obj 129 234 ode_osc;
 #X connect 0 0 1 0;
 #X connect 1 0 12 0;
 #X connect 6 0 9 0;
 #X connect 7 0 9 1;
 #X connect 10 0 11 0;
 #X connect 13 0 12 0;
+#X connect 24 0 11 0;
+#X connect 27 0 26 0;
+#X connect 28 0 27 0;
+#X connect 29 0 28 0;
+#X connect 30 0 28 1;
+#X connect 31 0 28 2;
+#X connect 32 0 38 0;
+#X connect 33 0 32 0;
+#X connect 34 0 33 0;
+#X connect 35 0 33 1;
+#X connect 36 0 33 2;
+#X connect 38 0 37 0;

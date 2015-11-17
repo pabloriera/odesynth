@@ -1,4 +1,4 @@
-#N canvas 1054 380 646 415 10;
+#N canvas 806 249 646 415 10;
 #X obj 54 335 iem_send;
 #X msg 247 299 set pd-\$1;
 #X obj 247 235 loadbang;
@@ -14,8 +14,8 @@
 #X obj 251 102 loadbang;
 #X obj 251 135 symbol \$4;
 #X msg 8 96 clear;
-#X obj 140 25 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 2 256;
+#X obj 135 29 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
 #X obj 207 25 unpack;
 #X obj 54 273 pack f f f s s;
 #X msg 54 301 obj \$1 \$2 \$4 \$3 \$5;
@@ -24,6 +24,11 @@
 #X obj 331 136 f 0;
 #X obj 363 136 f 25;
 #X obj 54 -3 route bang clear float step;
+#X obj 73 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 116 170 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 54 52 spigot;
 #X connect 1 0 0 1;
 #X connect 2 0 7 0;
 #X connect 3 0 6 0;
@@ -34,12 +39,15 @@
 #X connect 7 0 1 0;
 #X connect 8 0 9 0;
 #X connect 9 0 11 1;
+#X connect 9 0 25 0;
 #X connect 10 0 8 0;
 #X connect 11 0 4 0;
+#X connect 11 0 24 0;
 #X connect 12 0 13 0;
 #X connect 13 0 17 4;
 #X connect 14 0 0 0;
 #X connect 15 0 9 0;
+#X connect 15 0 26 1;
 #X connect 16 0 19 1;
 #X connect 16 1 19 2;
 #X connect 17 0 18 0;
@@ -50,7 +58,8 @@
 #X connect 20 0 22 0;
 #X connect 21 0 19 1;
 #X connect 22 0 19 2;
-#X connect 23 0 11 0;
+#X connect 23 0 26 0;
 #X connect 23 1 14 0;
 #X connect 23 2 15 0;
 #X connect 23 3 16 0;
+#X connect 26 0 11 0;

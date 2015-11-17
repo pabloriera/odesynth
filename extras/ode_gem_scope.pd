@@ -1,4 +1,4 @@
-#N canvas 616 181 1181 862 10;
+#N canvas 182 82 1181 661 10;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
@@ -21,13 +21,13 @@
 #X obj 685 -121 *~;
 #X obj 355 315 scaleXYZ 1 1 1;
 #X obj 394 289 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0.47 256;
+-262144 -1 -1 0.67 256;
 #X msg 228 306 draw point;
 #X msg 126 306 draw linestrip;
 #X obj 579 187 scopeXYZ~ 2048;
 #X obj 355 388 translateXYZ;
 #X obj 5 25 nbx 4 14 -1e+37 1e+37 0 1 empty empty Scale 42 8 0 8 -262144
--1 -1 0.47 256;
+-1 -1 0.67 256;
 #X obj 605 -156 nbx 4 14 -1e+37 1e+37 0 1 empty gem_scope_size_x_\$1
 X.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj 700 -157 nbx 4 14 -1e+37 1e+37 0 1 empty gem_scope_size_y_\$1
@@ -36,7 +36,7 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 -1 -1 2 256;
 #X msg 10 297 length \$1;
 #X obj 10 275 nbx 5 14 1 1e+37 0 1 empty empty Length 0 -8 0 8 -262144
--1 -1 2048 256;
+-1 -1 4096 256;
 #X obj 7 6 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1 1;
 #X obj 214 277 bng 15 250 50 0 empty gem_scope_draw_point_\$1 P 17
 7 0 10 -262144 -1 -1;
@@ -45,17 +45,17 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj 355 253 gemhead 10;
 #X obj 10 240 expr pow(2 \, $f1);
 #X obj 5 44 nbx 3 14 1 1e+37 0 1 empty empty 2pow 34 8 0 8 -262144
--1 -1 11 256;
+-1 -1 12 256;
 #X obj 355 566 color;
 #X obj 382 538 r gem_scope_color_\$1;
-#X obj 158 0 grid xy 60 -8 8 60 -8 8 0 0.1 0.1 10 10 188 32;
+#X obj 158 0 grid xy 60 -8 8 60 -8 8 0 0.1 0.1 10 10 37 318;
 #X msg 160 -37 color 255 255 255;
 #X obj 160 -60 loadbang;
-#X obj 220 0 grid xy 60 0 360 60 0 180 0 2 2 10 10 178 -24;
+#X obj 220 0 grid xy 60 0 360 60 0 180 0 2 2 10 10 48 302;
 #X obj 151 276 loadbang;
 #X obj 355 501 rotateXYZ;
 #X obj 433 478 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 180 256;
+-262144 -1 -1 0 256;
 #X obj 370 477 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
 #X obj 814 -143 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
@@ -69,9 +69,9 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj 496 101 multiplex~;
 #X obj 552 32 phasor~;
 #X obj 77 24 nbx 4 14 0 1e+37 0 1 empty empty Freq.X 42 8 0 8 -262144
--1 -1 1.11 256;
+-1 -1 19 256;
 #X obj 26 7 hradio 12 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 3;
 #X obj -33 -35 state_io_set /\$1/gem/toggle;
 #X obj 355 225 r /\$1/gem/toggle;
 #X obj -175 22 state_io_set /\$1/gem/scale;
@@ -87,19 +87,19 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj 171 128 state_io_set /\$1/gem/shift/y;
 #X obj 128 105 state_io_set /\$1/gem/shift/x;
 #X obj 128 77 nbx 4 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 8
--262144 -1 -1 0 256;
+-262144 -1 -1 -8 256;
 #X obj 171 77 nbx 4 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 8
--262144 -1 -1 -0.500034 256;
+-262144 -1 -1 -8 256;
 #X obj -178 70 state_io_set /\$1/gem/shift/z;
 #X obj 77 42 nbx 4 14 -1e+37 1e+37 0 1 empty empty Z.shift 42 8 0 8
--262144 -1 -1 0 256;
+-262144 -1 -1 -10 256;
 #X obj 446 385 state_r_line /\$1/gem/shift/z;
 #X obj 265 182 state_io_set /\$1/gem/rotate/z;
 #X obj 222 155 state_io_set /\$1/gem/rotate/y;
 #X obj 222 76 nbx 4 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 8
 -262144 -1 -1 0 256;
 #X obj 265 76 nbx 4 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 8
--262144 -1 -1 180 256;
+-262144 -1 -1 0 256;
 #X obj 313 10 pack f f;
 #X msg 313 34 xvalues \$1 \$2;
 #X obj 370 432 state_r_line /\$1/gem/rotate/y;
@@ -114,7 +114,7 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj 554 77 -~ 4;
 #X obj 553 55 *~ 16;
 #X obj 621 41 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 9.94 256;
+-262144 -1 -1 13 256;
 #X obj 621 60 / 2;
 #X obj 67 414 samplerate~;
 #X obj 67 389 loadbang;
@@ -123,7 +123,7 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj -2 461 expr $f2/$f1;
 #X obj -2 355 r /\$1/gem/freqx;
 #X obj -2 486 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 39729.7 256;
+-262144 -1 -1 2321.05 256;
 #X msg -3 503 length \$1;
 #X obj -3 529 s \$0_scope;
 #X obj -94 229 r /\$1/gem/radio;
@@ -139,19 +139,19 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj 848 -111 r /\$1/gem/radio;
 #X obj 883 -57 - 1;
 #X obj 886 -36 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 2 256;
 #X obj 815 15 r /\$1/gem/radio;
 #X obj 815 39 sel 0;
 #X msg 815 64 0;
 #X msg 845 64 1;
 #X obj 77 6 nbx 4 14 -1e+37 1e+37 0 1 empty empty X.size 42 8 0 8 -262144
--1 -1 10 256;
+-1 -1 13 256;
 #X obj -6 -147 state_io_set /\$1/gem/xsize;
 #X obj 750 185 r /\$1/gem/xsize;
 #X obj 633 335 r /\$1/gem/radio;
 #X obj 633 361 sel 0;
 #X obj 446 410 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 -10 256;
 #X msg 660 388 0;
 #X obj -67 278 t b;
 #X obj 598 415 spigot;
@@ -161,7 +161,9 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj 800 -206 r~ \$1_out_2;
 #X obj 848 -84 moses 1;
 #X obj 674 10 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 1.11 256;
+-262144 -1 -1 19 256;
+#X obj 646 417 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 1 0 36 0;
 #X connect 2 0 4 1;
 #X connect 3 0 5 1;
@@ -286,12 +288,13 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X connect 111 1 113 0;
 #X connect 112 0 115 0;
 #X connect 113 0 11 3;
-#X connect 113 0 115 1;
+#X connect 113 0 122 0;
 #X connect 114 0 85 0;
 #X connect 115 0 11 3;
-#X connect 116 0 115 1;
+#X connect 116 0 122 0;
 #X connect 117 0 4 0;
 #X connect 118 0 5 0;
 #X connect 119 0 35 0;
 #X connect 120 1 101 0;
+#X connect 122 0 115 1;
 #X coords 0 -1 1 1 280 60 1 0 0;

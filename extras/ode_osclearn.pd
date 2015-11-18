@@ -1,4 +1,4 @@
-#N canvas 786 410 724 334 10;
+#N canvas 416 585 724 334 10;
 #X declare -path extras;
 #X declare -lib mrpeach;
 #X obj 100 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
@@ -6,11 +6,11 @@
 #X obj -143 154 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0
 10 -262144 -1 -1 0 256;
 #X obj -49 199 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 -100 256;
+-262144 -1 -1 0 256;
 #X obj -143 262 s \$1/value;
 #X obj -143 221 maxlib/scale 0 1 0 1;
 #X obj 76 199 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 64 256;
+-262144 -1 -1 5000 256;
 #X obj -48 174 r \$1/min;
 #X obj 76 173 r \$1/max;
 #X obj 174 128 r unpacked_osc;
@@ -19,7 +19,8 @@
 #X obj -143 128 osclearn;
 #X obj 166 190 PRINT;
 #X obj 174 157 routeOSC \$1/value;
-#X obj 295 157 routeOSC \$1/toogle;
+#X obj 295 157 routeOSC \$1/toggle;
+#X obj 295 217 s \$1/togg;
 #X connect 0 0 11 1;
 #X connect 1 0 4 0;
 #X connect 2 0 4 3;
@@ -31,5 +32,6 @@
 #X connect 8 0 14 0;
 #X connect 11 0 1 0;
 #X connect 13 0 4 0;
-#X connect 13 0 12 0;
+#X connect 14 0 12 0;
+#X connect 14 0 15 0;
 #X coords 0 -1 1 1 15 15 2 100 100;

@@ -1,4 +1,4 @@
-#N canvas 579 168 491 532 10;
+#N canvas 521 148 491 532 10;
 #X declare -path extras;
 #X declare -path extras/state_manager;
 #X declare -path extras/osclearn;

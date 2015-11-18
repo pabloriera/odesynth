@@ -1,4 +1,4 @@
-#N canvas 1423 264 397 621 10;
+#N canvas 764 82 509 621 10;
 #X declare -path extras;
 #X declare -path extras/state_manager;
 #X declare -lib pdcontainer;
@@ -20,6 +20,20 @@
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib sfruit;
+#X declare -lib pdcontainer;
+#X declare -lib sfruit;
+#X declare -lib pdcontainer;
+#X declare -lib sfruit;
+#X declare -lib pdcontainer;
+#X declare -lib sfruit;
+#X declare -lib pdcontainer;
+#X declare -lib sfruit;
 #X declare -lib pdcontainer;
 #X declare -lib sfruit;
 #X declare -lib pdcontainer;
@@ -80,6 +94,11 @@
 -1 -1;
 #X obj 12 -18 matrix_faders;
 #X obj -39 225 matrix_knobs;
+#X obj 304 -57 matrix_input adc;
+#X obj 303 -112 adc~;
+#X obj 304 -82 *~ 100;
 #X connect 3 0 2 0;
 #X connect 4 0 5 0;
 #X connect 4 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;

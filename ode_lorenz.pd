@@ -1,4 +1,4 @@
-#N canvas 896 150 474 518 10;
+#N canvas 391 105 474 518 10;
 #X declare -path extras;
 #X declare -path extras/state_manager;
 #X declare -path extras/osclearn;
@@ -112,6 +112,7 @@
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
 #X declare -path extras/linux64;
 #X msg -155 255 setP \$1 \$2;
 #X obj 144 -83 path extras;
@@ -124,9 +125,6 @@
 #X obj -155 46 ode_multihslider lorenz/osc/freq lorenz/osc/amp lorenz/noise/amp
 lorenz/noise/fc lorenz/delay/time lorenz/delay/amp lorenz/input lorenz/output
 ;
-#X obj 161 352 switch~;
-#X obj 161 333 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
 #X obj -154 -84 r~ lorenz_delayed;
 #X obj -154 -24 throw~ lorenz_in_0;
 #X obj -152 309 ode_gem_scope lorenz;
@@ -136,11 +134,11 @@ lorenz/noise/fc lorenz/delay/time lorenz/delay/amp lorenz/input lorenz/output
 lorenz;
 #X obj -38 -84 matrix_output lorenz_input;
 #X obj 187 9 ode_auto_switch lorenz;
+#X obj 161 309 osc_encoder lorenz;
 #X connect 0 0 2 0;
-#X connect 4 0 12 0;
+#X connect 4 0 10 0;
 #X connect 7 0 0 0;
 #X connect 7 0 3 0;
-#X connect 10 0 9 0;
-#X connect 11 0 4 0;
-#X connect 15 0 2 0;
-#X connect 17 0 4 1;
+#X connect 9 0 4 0;
+#X connect 13 0 2 0;
+#X connect 15 0 4 1;

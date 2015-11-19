@@ -1,6 +1,6 @@
-#N canvas 482 216 1177 540 10;
+#N canvas 126 126 1177 540 10;
 #X obj 4 -73 nbx 5 14 0 1e+37 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 0 256;
+-1 -1 0.850394 256;
 #X text -16 -77 F2;
 #X obj 4 -19 osc~;
 #X obj 4 -54 sig~ 1000;
@@ -11,7 +11,7 @@
 #X obj 320 253 *~;
 #X obj 334 56 line~;
 #X obj 334 -4 nbx 8 14 0 1e+37 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 23.622 256;
+-1 -1 0 256;
 #X obj 4 -119 pack f 50;
 #X obj 4 -96 line;
 #X obj 436 184 noise~;
@@ -32,37 +32,37 @@
 -262144 -1 -1 0 256;
 #X obj 697 -50 sig~;
 #X obj 422 141 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 2598.43 256;
 #X obj 320 225 lp2~ 1000 0.5;
 #X obj 127 102 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 127 122 route 0;
 #X obj 43 250 nbx 5 14 -1e+08 1e+12 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 129.921 256;
+-262144 -1 -1 0 256;
 #X obj 334 -80 moses 0.002;
 #X msg 334 -57 0;
 #X msg 127 147 0;
 #X obj 424 -81 r /\$1/noise/amp/togg;
-#X obj 424 -59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 424 -59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 424 -40 route 0;
 #X obj 463 1 f;
 #X obj 463 -19 b;
 #X msg 424 -19 0;
-#X obj 506 133 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 506 133 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 506 152 route 0;
 #X obj 545 193 f;
 #X obj 545 173 b;
 #X msg 506 173 0;
-#X obj 801 94 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 801 94 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 801 113 route 0;
 #X obj 840 154 f;
 #X obj 840 134 b;
 #X msg 801 134 0;
 #X obj 781 -113 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 781 -94 route 0;
 #X obj 820 -53 f;
 #X obj 820 -73 b;
@@ -113,8 +113,8 @@
 #X obj 127 49 state_r_line /\$1/osc/amp/togg;
 #X obj 43 83 state_r_line /\$1/osc/amp/value;
 #X obj 131 -21 r /\$1/osc/type/togg;
-#X obj 908 286 allpass~ 100 4 0.7 0;
 #X obj 909 315 throw~ \$0_out2;
+#X obj 859 282 hilbert~;
 #X connect 0 0 3 0;
 #X connect 2 0 18 0;
 #X connect 3 0 2 0;
@@ -199,7 +199,7 @@
 #X connect 61 0 60 0;
 #X connect 62 1 31 0;
 #X connect 63 0 72 0;
-#X connect 63 0 90 0;
+#X connect 63 0 91 0;
 #X connect 64 0 14 0;
 #X connect 65 0 76 0;
 #X connect 66 0 63 0;
@@ -219,5 +219,5 @@
 #X connect 87 0 29 0;
 #X connect 88 0 62 0;
 #X connect 89 0 19 0;
-#X connect 90 0 91 0;
+#X connect 91 1 90 0;
 #X coords 0 540 1 539 360 250 0;

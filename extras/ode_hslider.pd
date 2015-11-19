@@ -1,4 +1,4 @@
-#N canvas 67 136 1292 607 10;
+#N canvas 63 136 1292 607 10;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
@@ -9,7 +9,7 @@
 #X declare -path extras;
 #X declare -lib mrpeach;
 #X obj 405 101 nbx 4 14 -1e+37 1e+37 0 1 \$0_slider_max \$0_slider_max_set
-empty 0 -8 0 8 -204800 -1 -1 1 256;
+empty 0 -8 0 8 -204800 -1 -1 8 256;
 #X obj 232 101 nbx 4 14 -1e+37 1e+37 0 1 \$0_slider_min \$0_slider_min_set
 empty 0 -8 0 8 -204800 -1 -1 0 256;
 #X obj 186 100 tgl 15 1 \$0_togg \$0_togg_set empty 17 7 0 10 -204800
@@ -41,11 +41,11 @@ empty 0 -8 0 8 -204800 -1 -1 0 256;
 #X msg 870 331 log;
 #X obj 839 356 s \$0_slider_set;
 #X obj 985 451 sel 0;
-#X obj 274 100 hsl 128 15 0 1 0 1 \$0_slider \$0_slider_set 0 2 9 0
+#X obj 274 100 hsl 128 15 0 8 0 1 \$0_slider \$0_slider_set 0 2 9 0
 9 -204786 -1 -1 0 1;
 #X obj 399 262 state_io_set /\$2/value;
 #X obj 491 101 nbx 4 14 0 80000 0 1 \$0_line_time \$0_line_time_set
-empty 0 -8 0 8 -204786 -1 -1 0.01 256;
+empty 0 -8 0 8 -204786 -1 -1 0.1 256;
 #X obj 708 161 r \$0_label;
 #X obj 603 161 r \$0_line_time;
 #X obj 603 211 s \$0_line_time_set;
@@ -116,8 +116,10 @@ empty 0 -8 0 8 -204800 -1 -1 0 256;
 #X obj 420 389 r /\$2/max;
 #X obj 357 415 hotpack f f;
 #X obj 357 438 expr $f2-$f1;
-#X obj 100 391 expr -log(1-$f1/10000)*$f2/$f4*($f3*2-1);
 #X obj 191 368 / 20;
+#X obj 252 427 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 8 256;
+#X obj 100 391 expr -log(1-$f1/10000)*$f2/100*$f4*($f3*2-1);
 #X connect 6 0 73 0;
 #X connect 8 0 29 1;
 #X connect 10 0 54 1;
@@ -146,13 +148,13 @@ empty 0 -8 0 8 -204800 -1 -1 0 256;
 #X connect 42 0 86 0;
 #X connect 43 0 42 0;
 #X connect 44 0 50 0;
-#X connect 45 0 98 0;
+#X connect 45 0 100 0;
 #X connect 46 0 80 1;
 #X connect 47 0 80 2;
 #X connect 49 0 51 0;
 #X connect 50 0 42 1;
 #X connect 51 0 83 1;
-#X connect 52 0 99 0;
+#X connect 52 0 98 0;
 #X connect 53 0 7 0;
 #X connect 54 0 12 0;
 #X connect 55 0 15 0;
@@ -181,7 +183,7 @@ empty 0 -8 0 8 -204800 -1 -1 0 256;
 #X connect 81 0 80 0;
 #X connect 83 0 84 0;
 #X connect 84 0 73 0;
-#X connect 85 0 98 2;
+#X connect 85 0 100 2;
 #X connect 86 0 45 0;
 #X connect 86 1 85 0;
 #X connect 87 0 48 0;
@@ -195,7 +197,8 @@ empty 0 -8 0 8 -204800 -1 -1 0 256;
 #X connect 94 0 96 0;
 #X connect 95 0 96 1;
 #X connect 96 0 97 0;
-#X connect 97 0 98 3;
-#X connect 98 0 81 0;
-#X connect 99 0 98 1;
+#X connect 97 0 99 0;
+#X connect 97 0 100 3;
+#X connect 98 0 100 1;
+#X connect 100 0 81 0;
 #X coords 0 -1 1 1 445 15 2 100 100;

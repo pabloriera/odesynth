@@ -1,4 +1,4 @@
-#N canvas 732 179 629 564 10;
+#N canvas 730 179 629 564 10;
 #X declare -path extras;
 #X declare -path extras/state_manager;
 #X declare -path extras/osclearn;
@@ -11,18 +11,6 @@
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
-#X declare -lib pdcontainer;
 #X declare -path extras;
 #X declare -lib mrpeach;
 #X declare -lib pdcontainer;
@@ -106,6 +94,18 @@
 #X declare -lib pdcontainer;
 #X declare -path extras;
 #X declare -lib mrpeach;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
+#X declare -lib pdcontainer;
 #X msg -155 255 setP \$1 \$2;
 #X obj 144 -141 path extras;
 #X obj -155 277 s hopf;
@@ -119,19 +119,19 @@
 #X obj -156 21 s~ hopf_out_2;
 #X obj -40 -93 matrix_output hopf_input;
 #X obj 144 -81 path extras/linux64;
-#X obj -67 23 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj -67 23 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj -160 -6 ode_matrix_node 2 2 hopf ode_rk4~ ../ode_libs/linux64
 hopf;
 #X obj -39 22 state_io_set /hopf/osc/type/togg;
 #X obj -158 -64 ode_fx hopf;
-#X obj -151 319 ode_gem_scope hopf;
 #X obj -155 46 ode_multihslider hopf/osc/freq hopf/osc/amp hopf/noise/amp
 hopf/noise/fc hopf/delay/time hopf/delay/amp hopf/input hopf/output
 ;
 #X obj -155 195 ode_multihslider hopf/w hopf/e;
 #X obj 144 -57 ode_auto_switch hopf;
-#X obj 145 -34 osc_encoder hopf;
+#X obj -151 319 ode_gem_scope hopf;
+#X obj 145 -34 ode_osc hopf;
 #X connect 0 0 2 0;
 #X connect 6 0 2 0;
 #X connect 7 0 16 0;
@@ -140,5 +140,5 @@ hopf/noise/fc hopf/delay/time hopf/delay/amp hopf/input hopf/output
 #X connect 15 0 13 0;
 #X connect 16 0 8 0;
 #X connect 16 1 9 0;
-#X connect 19 0 0 0;
-#X connect 19 0 3 0;
+#X connect 18 0 0 0;
+#X connect 18 0 3 0;

@@ -1,4 +1,4 @@
-#N canvas 178 82 1181 661 10;
+#N canvas 172 82 1181 661 10;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
@@ -48,14 +48,14 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 -1 -1 12 256;
 #X obj 355 606 color;
 #X obj 382 578 r gem_scope_color_\$1;
-#X obj 158 0 grid xy 60 -8 8 60 -8 8 0 0.1 0.1 10 10 186 29;
+#X obj 158 0 grid xy 60 -8 8 60 -8 8 0 0.1 0.1 10 10 189 30;
 #X msg 160 -37 color 255 255 255;
 #X obj 160 -60 loadbang;
 #X obj 392 -155 grid xy 60 0 360 60 0 180 0 2 2 10 10 220 186;
 #X obj 151 276 loadbang;
 #X obj 355 541 rotateXYZ;
 #X obj 446 527 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 180 256;
 #X obj 389 508 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
 #X obj 814 -143 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0
@@ -69,7 +69,7 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj 496 101 multiplex~;
 #X obj 552 32 phasor~;
 #X obj 77 24 nbx 4 14 0 1e+37 0 1 empty empty Freq.X 42 8 0 8 -262144
--1 -1 10 256;
+-1 -1 19 256;
 #X obj 26 7 hradio 12 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
 #X obj -33 -35 state_io_set /\$1/gem/toggle;
@@ -85,9 +85,9 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj 234 99 state_io_set /\$1/gem/shift/y;
 #X obj 95 143 state_io_set /\$1/gem/shift/x;
 #X obj 128 77 nbx 4 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 8
--262144 -1 -1 -0.500033 256;
+-262144 -1 -1 0.0903673 256;
 #X obj 171 77 nbx 4 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 8
--262144 -1 -1 0.200067 256;
+-262144 -1 -1 -1.17908 256;
 #X obj -178 70 state_io_set /\$1/gem/shift/z;
 #X obj 77 42 nbx 4 14 -1e+37 1e+37 0 1 empty empty Z.shift 42 8 0 8
 -262144 -1 -1 0 256;
@@ -116,7 +116,7 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj -2 461 expr $f2/$f1;
 #X obj -2 355 r /\$1/gem/freqx;
 #X obj -2 486 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 4410 256;
+-262144 -1 -1 2321.05 256;
 #X msg -3 503 length \$1;
 #X obj -3 529 s \$0_scope;
 #X obj -94 229 r /\$1/gem/radio;
@@ -147,14 +147,14 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X obj 800 -206 r~ \$1_out_2;
 #X obj 848 -84 moses 1;
 #X obj 674 10 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 10 256;
+-262144 -1 -1 19 256;
 #X obj 514 579 r gem_scope_color;
 #X obj 220 2 vsl 20 55 0 360 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 242 2 vsl 20 55 0 360 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 264 2 vsl 20 55 0 180 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5400 1;
 #X obj 221 148 state_io_set /\$1/gem/rotate/x;
 #X obj 381 -80 nbx 4 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 8
 -262144 -1 -1 0 256;
@@ -180,6 +180,10 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X msg 95 96 \$1 100;
 #X obj 171 127 line;
 #X msg 171 104 \$1 100;
+#X obj 211 -261 r unpacked_osc;
+#X obj 211 -212 unpack f f;
+#X obj 211 -236 routeOSC /gem/\$1/xy /gem/\$1/scale;
+#X obj 308 -211 s /\$1/gem/scale;
 #X connect 1 0 35 0;
 #X connect 2 0 4 1;
 #X connect 3 0 5 1;
@@ -322,4 +326,9 @@ Y.Size 0 -8 0 8 -262144 -1 -1 1 256;
 #X connect 131 0 130 0;
 #X connect 132 0 53 0;
 #X connect 133 0 132 0;
+#X connect 134 0 136 0;
+#X connect 135 0 56 0;
+#X connect 135 1 55 0;
+#X connect 136 0 135 0;
+#X connect 136 1 137 0;
 #X coords 0 -1 1 1 284 60 1 0 0;

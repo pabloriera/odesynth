@@ -1,0 +1,17 @@
+#N canvas 119 169 450 300 10;
+#X obj 54 167 switch~;
+#X obj 54 73 sel 0;
+#X obj 54 120 change;
+#X obj 54 141 t f f;
+#X msg 83 98 1;
+#X msg 54 98 0;
+#X obj 54 45 r /\$1/output/value;
+#X obj 121 167 s /\$1/gem/toggle;
+#X connect 1 0 5 0;
+#X connect 1 1 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 3 1 7 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;

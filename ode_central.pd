@@ -1,74 +1,68 @@
-#N canvas 1411 457 574 712 10;
+#N canvas 735 127 465 307 10;
 #X declare -lib iemmatrix;
 #X declare -path extras;
 #X declare -path extras/state_manager;
 #X declare -lib pdcontainer -lib tof;
 #X declare -path extras/osclearn;
 #X declare -lib mrpeach;
-#X obj 103 -86 loadbang;
-#X msg 103 -62 dir ../../presets;
-#X obj 128 127 import iemmatrix;
-#X obj 128 149 path extras;
-#X obj 128 170 path extras/state_manager;
-#X obj 12 20 gem.control;
-#X obj 129 28 catch~ ode_master_L;
-#X obj 197 53 catch~ ode_master_R;
-#X obj 127 192 matrix20x20;
-#X obj 128 82 output_clip~;
-#X obj 205 193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 10 -439 import iemmatrix;
+#X obj 10 -417 path extras;
+#X obj 10 -396 path extras/state_manager;
+#X obj 185 -444 gem.control;
+#X obj 9 -374 matrix20x20;
+#X obj 87 -373 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 127 214 matrix_containers 20;
-#X obj 12 -36 state_manager_byname;
-#X obj 12 -63 r preset;
-#X msg -2 -263 \; preset time 1000 \, name hopf0 \, load;
-#X msg -2 -228 \; preset time 1000 \, name hopf1 \, load;
-#X msg -3 -436 \; preset time 5000 \, name lorenz0 \, load \, time
+#X obj 9 -352 matrix_containers 20;
+#X obj 8 -212 state_manager_byname;
+#X obj 8 -239 r preset;
+#X msg 12 -76 \; preset time 5000 \, name lorenz0 \, load \, time 0
+;
+#X msg 11 -111 \; preset time 4000 \, name lorenz1 \, load \, time
 0;
-#X msg -3 -402 \; preset time 4000 \, name lorenz1 \, load \, time
-0;
-#X msg -3 -369 \; preset name lorenz0;
-#X msg -3 -336 \; preset name lorenz1;
-#X msg -3 -302 \; preset name lorenz3;
-#X msg -2 -190 \; preset name hopf1;
-#X msg -2 -153 \; preset name hopf0;
-#X msg 125 -181 \; preset name hopf2;
-#X msg 231 193 print;
-#X msg 265 -177 \; preset name hopf_lorenz0;
-#X obj 298 -305 s gem_scope_color;
-#X obj 298 -332 hsv2rgb;
-#X obj 298 -357 hotpack f f f;
-#X obj 298 -378 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+#X msg 11 -38 \; preset name lorenz0;
+#X msg 11 -5 \; preset name lorenz1;
+#X msg 11 29 \; preset name lorenz3;
+#X msg 12 141 \; preset name hopf1;
+#X msg 12 178 \; preset name hopf0;
+#X msg 139 150 \; preset name hopf2;
+#X msg 113 -373 print;
+#X msg 139 188 \; preset name hopf_lorenz0;
+#X obj 301 -352 s gem_scope_color;
+#X obj 301 -379 hsv2rgb;
+#X obj 301 -404 hotpack f f f;
+#X obj 301 -425 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.96 256;
-#X obj 330 -398 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 0.83 256;
-#X obj 364 -376 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+#X obj 333 -445 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.79 256;
+#X obj 367 -423 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.8 256;
-#X obj 437 -354 hsv2rgb;
-#X obj 437 -379 hotpack f f f;
-#X obj 437 -400 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+#X obj 304 -261 hsv2rgb;
+#X obj 304 -286 hotpack f f f;
+#X obj 304 -307 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.27 256;
-#X obj 469 -420 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+#X obj 336 -327 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.25 256;
-#X obj 503 -398 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 0.76 256;
-#X obj 437 -314 s gem_win;
-#X msg 437 -334 color \$1 \$2 \$3;
-#X obj 127 235 ode_osc;
-#X connect 0 0 1 0;
-#X connect 1 0 12 0;
-#X connect 6 0 9 0;
-#X connect 7 0 9 1;
-#X connect 10 0 11 0;
-#X connect 13 0 12 0;
-#X connect 24 0 11 0;
+#X obj 370 -305 nbx 5 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.18 256;
+#X obj 304 -221 s gem_win;
+#X msg 304 -241 color \$1 \$2 \$3;
+#X obj 9 -331 ode_osc;
+#X msg 12 68 \; preset time 1000 \, name hopf0 \, load \, time 0;
+#X msg 12 103 \; preset time 1000 \, name hopf1 \, load \, time 0;
+#X obj 10 -158 loadbang;
+#X msg 10 -134 \; preset dir ../../presets;
+#X connect 5 0 6 0;
+#X connect 8 0 7 0;
+#X connect 17 0 6 0;
+#X connect 20 0 19 0;
+#X connect 21 0 20 0;
+#X connect 22 0 21 0;
+#X connect 23 0 21 1;
+#X connect 24 0 21 2;
+#X connect 25 0 31 0;
+#X connect 26 0 25 0;
 #X connect 27 0 26 0;
-#X connect 28 0 27 0;
-#X connect 29 0 28 0;
-#X connect 30 0 28 1;
-#X connect 31 0 28 2;
-#X connect 32 0 38 0;
-#X connect 33 0 32 0;
-#X connect 34 0 33 0;
-#X connect 35 0 33 1;
-#X connect 36 0 33 2;
-#X connect 38 0 37 0;
+#X connect 28 0 26 1;
+#X connect 29 0 26 2;
+#X connect 31 0 30 0;
+#X connect 35 0 36 0;

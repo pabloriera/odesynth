@@ -1,4 +1,4 @@
-#N canvas 429 145 934 540 10;
+#N canvas 427 150 934 540 10;
 #X obj 57 62 initbang;
 #X obj 57 89 t b b;
 #X msg 91 115 top;
@@ -36,10 +36,10 @@
 #X obj 599 105 s~ \$1\$2;
 #X obj 460 37 *~;
 #X obj 476 13 line~;
-#X msg 476 -9 \$1 50;
 #X obj 116 267 symbol \$1\$2;
 #X obj 214 105 symbol \$1\$2;
 #X obj 476 -31 state_r_line /\$1/output/value;
+#X msg 476 -9 \$1 100;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 1 1 2 0;
@@ -54,13 +54,13 @@
 #X connect 10 0 5 1;
 #X connect 11 0 26 0;
 #X connect 12 0 11 0;
-#X connect 12 1 38 0;
+#X connect 12 1 37 0;
 #X connect 13 0 35 0;
 #X connect 15 0 14 0;
 #X connect 16 0 15 0;
 #X connect 17 0 8 0;
 #X connect 19 0 20 0;
-#X connect 20 0 39 0;
+#X connect 20 0 38 0;
 #X connect 20 1 25 0;
 #X connect 21 0 33 0;
 #X connect 22 0 21 0;
@@ -74,7 +74,7 @@
 #X connect 35 0 34 0;
 #X connect 35 0 14 0;
 #X connect 36 0 35 1;
-#X connect 37 0 36 0;
-#X connect 38 0 11 1;
-#X connect 39 0 24 0;
-#X connect 40 0 37 0;
+#X connect 37 0 11 1;
+#X connect 38 0 24 0;
+#X connect 39 0 40 0;
+#X connect 40 0 36 0;

@@ -1,4 +1,4 @@
-#N canvas 898 145 474 518 10;
+#N canvas 896 150 474 518 10;
 #X declare -path extras;
 #X declare -path extras/state_manager;
 #X declare -path extras/osclearn;
@@ -135,6 +135,7 @@ lorenz/noise/fc lorenz/delay/time lorenz/delay/amp lorenz/input lorenz/output
 #X obj -154 6 ode_matrix_node 1 3 lorenz ode_rk4~ ../ode_libs/linux64
 lorenz;
 #X obj -38 -84 matrix_output lorenz_input;
+#X obj 187 9 ode_auto_switch lorenz;
 #X connect 0 0 2 0;
 #X connect 4 0 12 0;
 #X connect 7 0 0 0;

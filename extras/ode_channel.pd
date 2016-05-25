@@ -1,10 +1,10 @@
-#N canvas 566 364 715 454 10;
+#N canvas 558 384 715 454 10;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X declare -lib pdcontainer;
 #X obj 200 153 vsl 40 75 0 127 0 0 empty empty LVL 0 -6 0 8 -262144
--1 -1 0 1;
+-1 -1 5200 1;
 #N canvas 567 264 420 225 gain 0;
 #X obj 72 63 inlet~;
 #X obj 73 135 outlet~;
@@ -36,7 +36,7 @@
 #X obj 73 135 outlet~;
 #X obj 129 45 mtof;
 #X obj 172 95 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 8.3686 256;
+-262144 -1 -1 0 256;
 #X obj 73 93 hip~ 10;
 #X obj 129 87 line;
 #X msg 129 66 \$1 100;
@@ -54,9 +54,9 @@
 #X obj 207 112 knob 25 25 0 140 0 1 empty empty HP 0 -8 0 8 -262144
 -1 -1 17 1;
 #X obj 207 70 knob 25 25 0 127 0 1 empty empty LP 0 -8 0 8 -262144
--1 -1 19 1;
+-1 -1 2400 1;
 #X obj 203 245 hsl 35 15 0 1 0 1 empty empty PAN -2 -6 0 8 -262144
--1 -1 1500 1;
+-1 -1 1700 1;
 #N canvas 955 527 408 221 pan 0;
 #X obj 101 29 inlet~;
 #X obj 102 103 outlet~;
@@ -80,7 +80,7 @@
 #X obj 294 218 throw~ ode_master_L;
 #X obj 414 218 throw~ ode_master_R;
 #X obj 202 43 nbx 4 12 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 8
--262144 -1 -1 0 256;
+-262144 -1 -1 2.16136 256;
 #X obj 473 76 r idiot_bang;
 #X msg 473 104 reset;
 #X obj 340 91 peakenv~ 1000;
@@ -91,8 +91,10 @@
 #X obj -23 113 state_io_set /channel/\$2/hp;
 #X obj -21 162 state_io_set /channel/\$2/level;
 #X obj -22 217 state_io_set /channel/\$2/pan;
+#X obj 347 173 dac~ \$1;
 #X connect 0 0 20 0;
 #X connect 1 0 8 0;
+#X connect 1 0 22 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X connect 5 0 19 0;

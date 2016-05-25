@@ -1,4 +1,4 @@
-#N canvas 902 500 702 297 10;
+#N canvas 900 505 702 297 10;
 #X obj 3 242 namecanvas \$0_signal_hub;
 #N canvas 242 260 975 359 builder 0;
 #X obj 61 102 s \$0_signal_hub;
@@ -115,16 +115,3 @@
 #X connect 49 0 40 1;
 #X connect 50 0 21 1;
 #X restore 4 269 pd builder;
-#X obj 0 0 catch~ caca_in_0;
-#X obj 130 0 catch~ caca_in_1;
-#X obj 260 0 catch~ caca_in_2;
-#X obj 0 150 s~ caca_out_0;
-#X obj 130 150 s~ caca_out_1;
-#X obj 260 150 s~ caca_out_2;
-#X obj 0 75 mtx_mul~ 3 3 20;
-#X connect 2 0 8 0;
-#X connect 3 0 8 1;
-#X connect 4 0 8 2;
-#X connect 8 0 5 0;
-#X connect 8 1 6 0;
-#X connect 8 2 7 0;
